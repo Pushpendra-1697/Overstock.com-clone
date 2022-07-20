@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+.form1{
+    border-right: 1px solid rgba(0, 0, 0, 0.255) ;
+    padding-right: 20px;
+    /* width: 100px; */
+    /* display: inline-block; */
+}
+
+
+/* ############  main ####### */
+
+ /* ########### .form ################ */
+.flex{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+.form .child{
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: top;
+}
+.form2 button{
+    background-color: rgb(38, 20, 82);
+    color: white;
+    
+}
+.form button i{
+    margin-right: 5px;
+    font-size: 20px;
+}
+.form form{
+    margin: 30px 0;
+}
+.form form input{
+    width: 400px;
+    padding: 10px;
+    font-weight: 700;
+}
+.form2 button img{
+    height:24px;
+    width:23px;
+    vertical-align: middle;
+    background-color: blue;
+    color: blue;
+
+}
+.form button{
+    width: 400px;
+    padding: 9px;
+    font-size: 15px;
+    border-radius: 4px;
+}
+.form .child1{
+    text-align: center;
+    margin-top: 30px;
+    word-spacing: 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.293);
+    padding-bottom: 2.5rem;
+}
+.child1 .one{
+    border-bottom: 1px solid black;
+}
+
+ /* ############ form1 ############ */
+
+.form .child2{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.242);
+    padding-bottom:3.6rem ;
+    /* display: inline-block; */
+}
+.middle{
+    text-align: center;
+    margin-top: -10px;
+}
+
+ /* ############# nav item ########### */
+ .nav-item a{
+text-decoration: none;
+display: inline-block;
+border: 1px solid black;
+width: 300px;
+height: 40px;
+line-height: 40px;
+/* text-align: center; */
+ }
+ .nav-item i{
+    font-size: 25px;
+ }
+ .nav-item{
+    text-align: center;
+    margin-top: 4rem;
+ }
+ .nav-item2{
+    margin-top: 15px;
+ }
+ .nav-item2 a{
+    background-color: blue;
+    color: white;
+ }
