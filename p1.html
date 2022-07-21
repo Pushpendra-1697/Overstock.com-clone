@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #navbar2{
+            width:100vw;
+            position: relative;
+        }
+        .crauser{
+            width: auto;
+        }
+        #navbar2 button{
+            position: absolute;
+            top:40%;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border: none;
+            font-size: 1.5rem;
+            color: black;
+            padding: 10px;
+            border-radius: 6px;
+        }
+        #navbar2 button:nth-child(2){
+            left: 10px;
+        }
+        #navbar2 button:nth-child(3){
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar2">
+        <img class="crauser" src="https://ak1.ostkcdn.com/img/mxc/07112022_5_Blackout_Curtains.jpg?imwidth=1920" alt="Crauser">
+        <button id="left-btn"><</button>
+        <button id="right-btn">></button>
+    </div>
+</body>
+</html>
+
+<script>
+    let imageLink=
+    ["https://ak1.ostkcdn.com/img/mxc/07112022_3_Boho_Outdoor_Rugs.jpg?imwidth=1920","https://ak1.ostkcdn.com/img/mxc/07112022_2_Storage_Sofas.jpg?imwidth=1920","https://ak1.ostkcdn.com/img/mxc/07112022_8_Outdoor_Ceiling_Fans.jpg?imwidth=1920","https://ak1.ostkcdn.com/img/mxc/07112022_5_Blackout_Curtains.jpg?imwidth=1920","https://ak1.ostkcdn.com/img/mxc/07112022_1_Outdoor_Bistro_Sets.jpg?imwidth=1920","https://ak1.ostkcdn.com/img/mxc/07112022_7_Wood_Platform_Beds.jpg?imwidth=1920"];
+let IMAGE=document.querySelector(".crauser");
+let leftBtn=document.getElementById("left-btn");
+let righttBtn=document.getElementById("right-btn");
+let count=0;
+righttBtn.addEventListener("click",function(){
+    count++;
+    if(count===imageLink.length){
+        count=0;
+    }
+    IMAGE.setAttribute("src",imageLink[count]);
+});
+
+leftBtn.addEventListener("click",function(){
+    count--;
+    if(count<0){
+        count=imageLink.length-1;
+    }
+    IMAGE.setAttribute("src",imageLink[count]);
+});
+</script>
