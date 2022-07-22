@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+</head>
+<body>
+    <h1>Cart Page</h1>
+    <h2> Total Cart Value:- <span id="total-price">0</span></h2>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    displayTable(cartLS);
+let cartLS=JSON.parse(localStorage.getItem("cart-page"))||[];
+
+function displayTable(cartLS){
+    document.querySelector("#container").innerHTML=null;
+    let sum=0;
+    productData.map(function(ele,index){
+        sum+=Number(ele.price);
+        let div=document.createElement("div");
+        let image=document.createElement("img");
+        image.setAttribute("src",ele.image);
+        let price=document.createElement("h2");
+        price.innerText=ele.price;
+        let catagory=document.createElement("h5");
+        catagory.innerText=ele.catagory;
+        let para=document.createElement("p");
+        para.innerText=ele.para;
+        let star=document.createElement("img");
+        star.setAttribute("src",ele.star);
+        let deleteBtn=document.createElement("button");
+        deleteBtn.innerText="Delete";
+        deleteBtn.addEventListener("click",function(){
+            deletetoCart(ele,index);
+        });
+        div.append(image,price,catagory,para,star,deleteBtn);
+        document.querySelector("#container").append(div);
+    });
+     document.querySelector("#total-price").innerText=sum;
+}
+
+function deletetoCart(ele,index){
+
+}
+</script>

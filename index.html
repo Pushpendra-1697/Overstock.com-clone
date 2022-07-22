@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="footer.css">
     <style>
         #father{
             display: flex;
-            border: 0px solid red;
             gap:20px;
-        }
-        
+        }      
         .first{
             background-color: red;
             text-align: center;
@@ -47,9 +46,6 @@
             display: flex;
             gap: 60px;
             padding: 10px;
-        }
-        #box2>div{
-            border: 0px solid blue;
         }
         .or{
             font-size: 30px;
@@ -106,8 +102,7 @@
             padding: 30px;
             width: 95vw;
             position: relative; 
-        }
-        
+        }   
         #container img:nth-child(1){
             height: 150px;
             width: 100%;
@@ -133,26 +128,25 @@
         #container button:nth-child(2){
            right: 28px;
         }
-        .display{
+        #display{
             display: flex;
-            border: 1px solid yellow;
             height: 20px;
-            margin-top:40px;
-            border: 1px solid blue;
+            margin-top:30px;
             padding: 10px;
             border-radius: 10px;
         }
-        .display input{
+        #display input{
             padding: 10px;
             width: 750px;
             border: none;
             font-size: medium;
         }
-        .navbar{
+        #navbar{
             border: 0px solid red;
-            padding: 10px;
+            padding: 50px;
+            margin-bottom: 40px;
         }
-        .navbar>img{
+        #navbar>img{
             width: 100%;
         }
         #navbar1{
@@ -160,6 +154,7 @@
             grid-template-columns: repeat(6,1fr);
             gap: 10px;
             padding: 60px;
+            margin-top: -40px;
         }
         #navbar1>div{
             text-align: center;
@@ -170,42 +165,56 @@
             width:100%;
         }
         #navbar2{
-            width:100vw;
-            position: relative;
-            margin: 20px auto;
-            width: 70%;
+            display: grid;
+            grid-template-columns:repeat(8,1fr);
+            gap: 10px;
+            padding: 30px;
+            position: relative;     
         }
-        .crauser{
+        #navbar2 div{
+            background-color: rgb(210, 222, 232);
+        }
+        #navbar2 img{
+            height: 170px;
             width: 100%;
-            height: 450px;
+            border: 0.5px solid rgb(214, 178, 178);
+        }
+        #navbar2 p{
+            color:black;
+            padding: 10px;
+            line-height: 23px;
+        }
+        #navbar2 h3{
+            padding: 10px;
+            font-size: 23px;
+            color: black;
         }
         #navbar2 button{
             position: absolute;
-            top:40%;
-            background-color: white;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            top: 35%;
+            background-color: rgb(100, 100, 100,0.4);
             border: none;
             font-size: 1.5rem;
             color: black;
             padding: 10px;
-            border-radius: 30%;
+            border-radius: 6px;
+        }
+        #navbar2 button:nth-child(1){
+           left: 30px;
         }
         #navbar2 button:nth-child(2){
-            left: 10px;
+           right: 28px;
         }
-        #navbar2 button:nth-child(3){
-            right: 10px;
-        }
-
         .heat{
             padding: 50px;
         }
         .heat img{
             width:100%;
-            height:400px;
+            height:500px;
         }
         #navbar3{
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
             gap: 20px;
             padding: 30px;
             text-align: center;
@@ -236,6 +245,7 @@
         }
         .randon{
             background-color: aliceblue;
+            margin-bottom: 40px;
         }
         #navbar5{
             display: grid;
@@ -266,7 +276,7 @@
         #navbar6 button{
             position: absolute;
             top: 30%;
-            background-color: white;
+            background-color: rgb(100, 100, 100,0.1);
             border: none;
             font-size: 1.5rem;
             color: black;
@@ -292,7 +302,6 @@
         #navbar7 img{
             height: 400px;
             width:100%;
-
         }
         #navbar7>div{
             background-color: aliceblue;
@@ -303,7 +312,7 @@
         }
         #navbar7 h2{
             padding: 20px;
-            margin-bottom: -45px;
+            margin-bottom: -30px;
         }
         .BTN{
             display: flex;
@@ -357,19 +366,17 @@
         }
         #navbar9 p{
             color: rgb(122, 122, 219);
-            margin-top: -15px;
             margin-left: 40px;
         }
-
         #navbar10{
             width:100vw;
             position: relative;
             margin: 20px auto;
-            width: 70%;
+            width: 90%;
         }
         .crauser{
             width: 100%;
-            height: 450px;
+            height: 550px;
         }
         #navbar10 button{
             position: absolute;
@@ -388,166 +395,140 @@
         #navbar10 button:nth-child(3){
             right: 10px;
         }
+        @media all and (min-width:481px) and (max-width:768px){
+            #middle{
+                flex-direction: column;
+            }
+            #middle2{
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(2,1fr);
+            }
+            #navbar{
+                padding: 10px;
+            }
+            #navbar img{
+                height: 600px;    
+            }
+            #navbar1{
+                grid-template-columns: repeat(3,1fr);
+            }
+            .heat{
+                padding: 20px;
+            }
+            #navbar3{
+                grid-template-columns: repeat(2,1fr);  
+            }
+            #navbar4{
+                flex-direction: column;
+            }
+            #navbar4 img{
+                width: 100%;
+            }
+            #navbar4 > div:nth-child(2)>img{
+                width:533px;
+            }
+            .randon{
+              width: 620px;
+            }
+            #navbar6{
+                grid-template-columns: repeat(3,1fr);
+            }
+            .random img{
+                width:600px;
+            }
+            #navbar7{
+                grid-template-columns: repeat(1,1fr);
+            }
+            .random1{
+                padding: 10px;
+            }
+            .random1 img{
+                width: 600px;   
+            }
+            #navbar8{
+                grid-template-columns: repeat(2,1fr);
+            }
+            #navbar9{
+                flex-direction: column;
+                gap: 20px;
+                justify-content: center;
+                align-items: center;
+            }
+            #container{
+                grid-template-columns: repeat(3,1fr);
+            }
+            #navbar2{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+        @media all and (min-width:320px) and (max-width:480px){
+            #middle{
+                flex-direction: column;
+            }
+            #middle2{
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(2,1fr);
+            }
+            #navbar{
+                padding: 10px;
+            }
+            #navbar img{
+                height: 600px;    
+            }
+            #navbar1{
+                grid-template-columns: repeat(3,1fr);
+            }
+            .heat{
+                padding: 20px;
+            }
+            #navbar3{
+                grid-template-columns: repeat(2,1fr);  
+            }
+            #navbar4{
+                flex-direction: column;
+            }
+            #navbar4 img{
+                width: 100%;
+            }
+            #navbar4 > div:nth-child(2)>img{
+                width:533px;
+            }
+            .randon{
+              width: 620px;
+            }
+            #navbar6{
+                grid-template-columns: repeat(3,1fr);
+            }
+            .random img{
+                width:600px;
+            }
+            #navbar7{
+                grid-template-columns: repeat(1,1fr);
+            }
+            .random1{
+                padding: 10px;
+            }
+            .random1 img{
+                width: 600px;   
+            }
+            #navbar8{
+                grid-template-columns: repeat(2,1fr);
+            }
+            #navbar9{
+                flex-direction: column;
+                gap: 20px;
+                justify-content: center;
+                align-items: center;
+            }
+            #container{
+                grid-template-columns: repeat(3,1fr);
+            }
+            #navbar2{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
         
 
-        /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-.container{
-    max-width: 1300px;
-    margin:0 auto;
-    padding: 0 32px;
-}
-
-/* ############ footer ############3 */
-
-footer{
-    background-color: rgb(71, 71, 78);
-    color: white;
-}
-
-footer section .father1{
-    display: flex;
-    justify-content: space-between;
-}
-footer .section1{
-    border-bottom: 1px solid rgba(255, 255, 255, 0.205);
-    padding-bottom: 15px;
-}
-
-.flex{
-    display: flex;
-    justify-content: space-between;
-  padding: 3em 0;
-}
-footer .nav-item1{
-    flex: 0 1 50%;
-}
-footer .child4{
-   flex: 0 1 25%;
-}
-footer .child5{
-   flex: 0 1 25%;
-}
-
-
-.child2{
-    display: flex;
-}
-footer .nav-item1 a{
-    font-size: 30px;
-    color: white;
-    margin-right: 3.2em;
-}
-footer .child2 i{
-    font-size: 30px;
-    color: white;
-}
-footer .child3 .child1{
-    margin: 10px 0;
-}
-footer .child4 h2{
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-footer .child5{
-    margin-top: 30px; 
-}
-footer .child6 h3{
-margin-bottom: 1.5em;
-font-size: 15px;
-font-weight: 700;
-}
-footer .child6 p{
-margin-bottom: 1.5em;
-font-size: 14px;
-font-weight: 700;
-}
-footer .child10 h4{
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 1.5em;
-}
-
-.child11{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 1em;
-}
-
-footer .child12{
-    flex: 0 1 50%;
-   
-}
-footer .child13{
-    flex: 0 1 25%;
-}
-footer .child14{
-    flex: 0 1 25%;
-}
-
-.child11 h3, h4{
-    margin-bottom: 1em;
-}
-footer .child15{
-    display: flex;
-    justify-content: space-between;
-    padding: 2.5em 0;
-}
-footer .child17{
-    flex: 0 1 50%;
-    display: flex;
-    justify-content: space-between;
-}
-.bg-color2{
-    background-color: rgb(24, 24, 34);
-}
-        
 
        
 
@@ -560,7 +541,7 @@ footer .child17{
     <div class="first">
         <i class="fa-solid fa-heart-circle-check"></i>
          Free shiping on EVERYTHINGS!* 
-         <span>Details</span>
+         <span>Details</span>  
     </div>
 
     <div id="grandfather">
@@ -569,9 +550,8 @@ footer .child17{
                 <img class="image" src="https://customercarecontacts.com/wp-content/uploads/2019/01/overstock-logo.jpg" alt="overstock-logo">
                 
             </div>
-            <div class="display">
-                <input type="text" placeholder="serch...everythings you find ships for free">
-                <img src="https://image.shutterstock.com/image-vector/search-icon-sign-design-260nw-730234714.jpg" alt="serch">
+            <div id="display">
+                <input style="border: 1px solid blue; padding: 20px;border-radius: 5px;" type="text" placeholder="serch...everythings you find ships for free">
             </div>
             <div>
                 <img class="image1" src="data:image/png;base64,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" alt="">
@@ -591,7 +571,7 @@ footer .child17{
             </div>
             <div>
                 <img class="image5" src="data:image/png;base64,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" alt="">
-                <p>Cart</p>
+                <p class="cart">Cart</p>
             </div>   
         </div>
         <div id="box2">
@@ -627,12 +607,12 @@ footer .child17{
     </div>
 
     <div id="navbar10">
-        <img class="crauser" src="https://ak1.ostkcdn.com/img/mxc/07112022_5_Blackout_Curtains.jpg?imwidth=1920" alt="Crauser">
+        <img class="crauser" src="https://ak1.ostkcdn.com/img/mxc/07132022-HP-A1-US-805x447_DesktopA1.jpg" alt="crauser">
         <button id="left-btn"><</button>
         <button id="right-btn">></button>
     </div>
 
-    <h1>Limited-Time Deals</h1>
+    <h1 style="font-size: 40px;">Limited-Time Deals</h1>
     <div id="middle2">
         <div>
             <img src="https://ak1.ostkcdn.com/img/mxc/07182022_HB_DOMESTIC_1.svg?imwidth=3840" alt="">
@@ -660,30 +640,30 @@ footer .child17{
         </div>
     </div>
 
-    <h1>Things We Know You'll Love</h1>
+    <h1 style="font-size: 40px;">Things We Know You'll Love</h1>
     <div id="container">
             <button id="left-btn"><</button>
             <button id="right-btn">></button>
     </div>
 
-    <div class="navbar">
-        <img src="https://ak1.ostkcdn.com/images/products/17813700/Layla-Outdoor-Wicker-Hanging-Basket-Chair-with-Cushions-by-Christopher-Knight-Home-e3568e3c-a41b-405d-b04c-a7b1174d9e78_600.jpg?imwidth=3840" alt="">
+    <div id="navbar">
+        <img src="https://ak1.ostkcdn.com/img/mxc/A3-DSK_7.19_SummerHomeSavings.jpg" alt="">
       </div>
     </div>
-    <h1>Fresh Finds In Each Category</h1>
+    <h1 style="font-size: 40px;">Fresh Finds In Each Category</h1>
     <div id="navbar1"></div>
 
-    <h1>More Ways to Seize the Summer</h1>
+    <h1 style="font-size: 40px;">More Ways to Seize the Summer</h1>
+    
     <div id="navbar2">
-        <img class="crauser" src="https://ak1.ostkcdn.com/img/mxc/07112022_5_Blackout_Curtains.jpg?imwidth=1920" alt="Crauser">
         <button id="left-btn"><</button>
         <button id="right-btn">></button>
     </div>
     <div class="heat">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUn6xraW8MGvwmDwBMR4NS-v0oehUXtGuoHQ&usqp=CAU" alt="pool">
+        <img src="https://ak1.ostkcdn.com/img/mxc/07132022-HP-A1-US-805x447_DesktopA1.jpg" alt="pool">
     </div>
 
-    <h1>Overstock Featured Brands</h1>
+    <h1 style="font-size: 40px;">Overstock Featured Brands</h1>
     <div id="navbar3">
         <div>
             <img src="https://ak1.ostkcdn.com/img/mxc/C-Mod_HP_C_Mod_27037529.jpg?imwidth=1920" alt="">
@@ -718,7 +698,7 @@ footer .child17{
         <img src="https://ak1.ostkcdn.com/img/mxc/2021-09-02_PLCC_PromoBanner_Desktop.svg?imwidth=1920" alt="">
     </div>
 
-    <h1>Explore Popular Categories</h1>
+    <h1 style="font-size: 40px;">Explore Popular Categories</h1>
     <div id="navbar5">
         <div>Living Room</div>
         <div>Bedroom</div>
@@ -737,7 +717,7 @@ footer .child17{
     <div class="random">
         <img src="https://ak1.ostkcdn.com/img/mxc/20210927_1400x350-BrandBanner.svg?imwidth=1920" alt="">
     </div>
-    <h1>We've Got Your Style</h1>
+    <h1 style="font-size: 40px;">We've Got Your Style</h1>
     <div id="navbar7">
         <div>
             <img src="https://ak1.ostkcdn.com/img/mxc/030822-SBS-Traditional.jpg?imwidth=1920" alt="">
@@ -761,7 +741,7 @@ footer .child17{
     <div class="random1">
         <img src="https://ak1.ostkcdn.com/img/mxc/011222-CLUBO-DSK-Non-member.svg?imwidth=1920" alt="">
     </div>
-    <h1>Trending Searches</h1>
+    <h1 style="font-size: 40px;">Trending Searches</h1>
     <div id="navbar8">
          <div>Outdoor Rugs</div>
          <div>Wallpaper</div>
@@ -789,6 +769,7 @@ footer .child17{
             <button>Join Now for $19.95/year</button>
         </div>
     </div>
+    <hr>
 
     <footer class="bg-color">
         <section class="section1">
@@ -918,11 +899,27 @@ footer .child17{
 
 </body>
 </html>
+
+
+
 <script>
-    document.querySelector("div").addEventListener("click",PopupFunc);
+    document.querySelector(".first").addEventListener("click",PopupFunc);
     function PopupFunc(){
-        window.location.href="Details.html";
+        alert(window.location.href="Details.html");   
     }
+
+    document.querySelector(".random").addEventListener("click",RandomFunc);
+ function RandomFunc(){
+    alert(window.location.href="confidence.html");
+ }
+
+  document.querySelector(".image5").addEventListener("click",cartFunct);
+  document.querySelector(".cart").addEventListener("click",cartFunct);
+  function cartFunct(){
+    window.location.href="product.html";
+  }
+
+ 
 
   let Data=[
     {image:"https://ak1.ostkcdn.com/images/products/17813700/Layla-Outdoor-Wicker-Hanging-Basket-Chair-with-Cushions-by-Christopher-Knight-Home-e3568e3c-a41b-405d-b04c-a7b1174d9e78_600.jpg?imwidth=3840", span:"Sale $76.04",para:"Hilford Cantilever 4-piece Heavy Duty Fillable Patio Umbrella Weighted Base Stand",star:"https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg"},
@@ -950,6 +947,34 @@ footer .child17{
       document.querySelector("#container").append(div);
   });
 
+  let Data3=[
+    {image:"https://ak1.ostkcdn.com/img/mxc/07112022_5_Blackout_Curtains.jpg?imwidth=1920", heading:"Blackout Curtains",para:"Hilford Cantilever 4-piece Heavy Duty Fillable Patio Umbrella Weighted Base Stand"},
+    {image:"https://ak1.ostkcdn.com/img/mxc/07112022_4_Expandable_Dining_Room_Sets.jpg?imwidth=1920", heading:"Expandable Dining Room Sets",para:"Hilford Cantilever 4-piece Heavy Duty Fillable Patio Umbrella Weighted Base Stand"},
+    {image:"https://ak1.ostkcdn.com/img/mxc/07112022_3_Boho_Outdoor_Rugs.jpg?imwidth=1920", heading:"Swivel Living Room Chairs",para:"Hilford Cantilever 4-piece Heavy Duty Fillable Patio Umbrella Weighted Base Stand"},
+    {image:"https://ak1.ostkcdn.com/img/mxc/07112022_6_Swivel_Living_Room_Chairs.jpg?imwidth=1920", heading:"Wood Plateform Ceds",para:"Hilford Cantilever 4-piece Heavy Duty Fillable Patio Umbrella Weighted Base Stand"},
+    {image:"https://ak1.ostkcdn.com/img/mxc/07112022_7_Wood_Platform_Beds.jpg?imwidth=1920", heading:"Outdoor Bistro Sets",para:"Hilford Cantilever 4-piece Heavy Duty Fillable Patio Umbrella Weighted Base Stand"},
+    {image:"https://ak1.ostkcdn.com/img/mxc/07112022_1_Outdoor_Bistro_Sets.jpg?imwidth=1920", heading:"Outdoor Ceiling Fans",para:"Hilford Cantilever 4-piece Heavy Duty Fillable Patio Umbrella Weighted Base Stand"},
+    {image:"https://ak1.ostkcdn.com/img/mxc/07112022_8_Outdoor_Ceiling_Fans.jpg?imwidth=1920", heading:"Storage Sofas",para:"Hilford Cantilever 4-piece Heavy Duty Fillable Patio Umbrella Weighted Base Stand"},
+    {image:"https://ak1.ostkcdn.com/img/mxc/07112022_2_Storage_Sofas.jpg?imwidth=1920", heading:"Boho Outdoor Rugs",para:"Hilford Cantilever 4-piece Heavy Duty Fillable Patio Umbrella Weighted Base Stand"}
+];
+let RightBtn3=document.getElementById("right-btn");
+  let LeftBtn3=document.getElementById("left-btn");
+  Data3.map(function(ele){
+    let div=document.createElement("div");
+    let image=document.createElement('img');
+    image.setAttribute("src",ele.image);
+    let heading=document.createElement("h3");
+    heading.innerText=ele.heading;
+    let para=document.createElement("p");
+     para.innerText=ele.para;
+      div.append(image,heading,para);
+      document.querySelector("#navbar2").append(div);
+  });
+
+
+
+
+
 let Data1=[
       {image:"https://ak1.ostkcdn.com/img/mxc/11192021-CatSilo-Furniture.png?imwidth=1920",heading:"Furniture"},
       {image:"https://ak1.ostkcdn.com/img/mxc/11152021-CatSilo-AreaRugs.png?imwidth=1920",heading:"Area Rugs"},
@@ -973,14 +998,15 @@ Data1.map(function(ele,index){
    div.append(image,heading);
    document.querySelector("#navbar1").append(div);
 });
-    
+  
+//top imageLinks//
 let imageLink=
-["https://ak1.ostkcdn.com/img/mxc/07112022_3_Boho_Outdoor_Rugs.jpg?imwidth=1920","https://ak1.ostkcdn.com/img/mxc/07112022_2_Storage_Sofas.jpg?imwidth=1920","https://ak1.ostkcdn.com/img/mxc/07112022_8_Outdoor_Ceiling_Fans.jpg?imwidth=1920","https://ak1.ostkcdn.com/img/mxc/07112022_5_Blackout_Curtains.jpg?imwidth=1920","https://ak1.ostkcdn.com/img/mxc/07112022_1_Outdoor_Bistro_Sets.jpg?imwidth=1920","https://ak1.ostkcdn.com/img/mxc/07112022_7_Wood_Platform_Beds.jpg?imwidth=1920"];
+["https://ak1.ostkcdn.com/img/mxc/A4-DSK_7.19_SummerHomeSavings.jpg","https://ak1.ostkcdn.com/img/mxc/07132022-HP-A1-US-805x447_DesktopA1.jpg","https://ak1.ostkcdn.com/img/mxc/A2-MBL_7.19_SummerHomeSavings.jpg","https://ak1.ostkcdn.com/img/mxc/A3-DSK_7.19_SummerHomeSavings.jpg"];
 let IMAGE=document.querySelector(".crauser");
-let leftBtn=document.getElementById("left-btn");
-let righttBtn=document.getElementById("right-btn");
+let leftBtn2=document.getElementById("left-btn");
+let rightBtn2=document.getElementById("right-btn");
 let count=0;
-righttBtn.addEventListener("click",function(){
+rightBtn2.addEventListener("click",function(){
     count++;
     if(count===imageLink.length){
         count=0;
@@ -988,7 +1014,7 @@ righttBtn.addEventListener("click",function(){
     IMAGE.setAttribute("src",imageLink[count]);
 });
 
-leftBtn.addEventListener("click",function(){
+leftBtn2.addEventListener("click",function(){
     count--;
     if(count<0){
         count=imageLink.length-1;
@@ -1022,19 +1048,18 @@ let Data2=[
       document.querySelector("#navbar6").append(div);
   });
 
-document.querySelector(".random").addEventListener("click",RandomFunc);
- function RandomFunc(){
-    window.location.href="confidence.html";
- }
 
+
+
+ //middle imageLinks//
  let imageLink1=
-    ["https://ak1.ostkcdn.com/img/mxc/07112022_3_Boho_Outdoor_Rugs.jpg?imwidth=1920","https://ak1.ostkcdn.com/img/mxc/07112022_2_Storage_Sofas.jpg?imwidth=1920","https://ak1.ostkcdn.com/img/mxc/07112022_8_Outdoor_Ceiling_Fans.jpg?imwidth=1920","https://ak1.ostkcdn.com/img/mxc/07112022_5_Blackout_Curtains.jpg?imwidth=1920","https://ak1.ostkcdn.com/img/mxc/07112022_1_Outdoor_Bistro_Sets.jpg?imwidth=1920","https://ak1.ostkcdn.com/img/mxc/07112022_7_Wood_Platform_Beds.jpg?imwidth=1920"];
+ ["https://ak1.ostkcdn.com/img/mxc/A4-DSK_7.19_SummerHomeSavings.jpg","https://ak1.ostkcdn.com/img/mxc/07132022-HP-A1-US-805x447_DesktopA1.jpg","https://ak1.ostkcdn.com/img/mxc/A2-MBL_7.19_SummerHomeSavings.jpg","https://ak1.ostkcdn.com/img/mxc/A3-DSK_7.19_SummerHomeSavings.jpg"];
 
     let IMAGE1=document.querySelector(".crauser");
 let leftBtn1=document.getElementById("left-btn");
-let righttBtn1=document.getElementById("right-btn");
+let rightBtn1=document.getElementById("right-btn");
 let count1=0;
-righttBtn.addEventListener("click",function(){
+rightBtn1.addEventListener("click",function(event){
     count1++;
     if(count1===imageLink1.length){
         count1=0;
@@ -1042,7 +1067,7 @@ righttBtn.addEventListener("click",function(){
     IMAGE1.setAttribute("src",imageLink1[count]);
 });
 
-leftBtn1.addEventListener("click",function(){
+leftBtn1.addEventListener("click",function(event){
     count1--;
     if(count1<0){
         count1=imageLink1.length-1;
@@ -1053,6 +1078,3 @@ leftBtn1.addEventListener("click",function(){
 
 
 </script>
-
-    
-    
