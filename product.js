@@ -1,6 +1,6 @@
 let productData=[
     {image:"https://ak1.ostkcdn.com/images/products/17813700/Layla-Outdoor-Wicker-Hanging-Basket-Chair-with-Cushions-by-Christopher-Knight-Home-e3568e3c-a41b-405d-b04c-a7b1174d9e78_600.jpg?imwidth=3840",productID:1, price:"76.04",catagory:"Twin XL",para:"Hilford Cantilever 4-piece Heavy Duty Fillable Patio Umbrella Weighted Base Stand",star:"https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg"},
-  {image:"https://ak1.ostkcdn.com/images/products/is/images/direct/0a97164046a601de3001ed229efbf46f537c9c69/Weller-10-Ft.-Offset-Cantilever-Hanging-Patio-Umbrella.jpg?imwidth=3840",productID:2,price:"126.39" ,catagory:"Twin XL",para:"Weller 10 Ft. Offset Cantilever Hanging Patio Umbrella",star:"https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg"},
+  {image:"https://ak1.ostkcdn.com/images/products/is/images/direct/0a97164046a601de3001ed229efbf46f537c9c69/Weller-10-Ft.-Offset-Cantilever-Hanging-Patio-Umbrella.jpg?imwidth=3840",productID:2,price:"126.39" ,catagory:"Twin XL",para:"10 Ft. Offset Cantilever Hanging Patio Umbrella",star:"https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg"},
   {image:"https://ak1.ostkcdn.com/images/products/is/images/direct/9722cf736820de69de4e225b95f06f501613e157/Outsunny-3-Person-Patio-Swing-Chair-Bench-Hammock-Outdoor-with-Convertible-Canopy%2C-Cushion%2C-Pillows-for-Porch-Backyard-Garden.jpg?imwidth=3840",productID:3,price:"152.34",catagory:"Twin XL",para:"Corvus Vera 10-foot Offset Cantilever Hanging Canopy Outdoor Patio Umbrella",star:"https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg"},
   {image:"https://ak1.ostkcdn.com/images/products/is/images/direct/ed2d9cb64b791e9c701b5422792cc629acb455c8/Kylie-Outdoor-Wicker-Hanging-Basket-Chair-by-Christopher-Knight-Home.jpg?imwidth=3840",productID:4,price:"86.04",catagory:"Twin XL",para:"Weller 10 Ft. Offset Cantilever Hanging Patio Umbrella",star:"https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg"},{image:"https://ak1.ostkcdn.com/images/products/is/images/direct/f91b1f0d552924a7cd0d82fd3477293c82df2ce4/Corvus-Vera-10-foot-Offset-Cantilever-Hanging-Canopy-Outdoor-Patio-Umbrella.jpg?imwidth=3840",productID:5,price:"760.04",catagory:"Twin XL",para:"Weller 10 Ft. Offset Cantilever Hanging Patio Umbrella",star:"https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg"},{image:"https://ak1.ostkcdn.com/images/products/is/images/direct/74a6cce26cc2744ea14486280aa04e48268a2441/Cayuse-Teardrop-Hang-Chair-%28Stand-Not-Included%29.jpg?imwidth=3840",productID:6,price:"7600.04",catagory:"Full",para:"Weller 10 Ft. Offset Cantilever Hanging Patio Umbrella",star:"https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg"},
   {image:"https://ak1.ostkcdn.com/images/products/is/images/direct/fc129d338b242d527247398b1abf1fec8b05930c/Pro-Heavy-Duty-Patio-Umbrella-Cross-Brace-Stand.jpg?imwidth=256",productID:7,price:"768.04",catagory:"Full",para:"Weller 10 Ft. Offset Cantilever Hanging Patio Umbrella",star:"https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg"},
@@ -26,6 +26,48 @@ let productData=[
 
   {image:"https://ak1.ostkcdn.com/images/products/is/images/direct/19cba60aa27d65a2624939beb166e4d328b88640/LUCID-Comfort-Collection-12-inch-Gel-and-Aloe-Memory-Foam-Mattress.jpg?impolicy=mediumlow",productID:23,price:"78769.04",catagory:"King",para:"Weller 10 Ft. Offset Cantilever Hanging Patio Umbrella",star:"https://ak1.ostkcdn.com/img/mxc/20200227_rating-star-full.svg"}
 ];
+
+    document.querySelector("#sort-category").addEventListener("change",handlecategorySort);
+    function handlecategorySort(){
+        let selected=document.querySelector("#sort-category").value;
+        if(selected==="Ascending"){
+            let sortAscend=productData.sort(function(a,b){
+                let x=a.catagory.toUpperCase();
+                let y=b.catagory.toUpperCase();
+                if(x>y) return 1;
+                if(x<y) return -1;
+                return 0;
+            });
+            displayTable(sortAscend);
+        }
+        if(selected==="Descending"){
+            let Sortdescend=productData.sort(function(a,b){
+                let x=a.catagory.toUpperCase();
+                let y=b.catagory.toUpperCase();
+                if(x>y) return -1;
+                if(x<y) return 1;
+                return 0;
+            })
+            displayTable(Sortdescend);
+        }
+    };
+    document.querySelector("#sort-price").addEventListener("change",handleSortPrice);
+    function handleSortPrice(){
+        let selected=document.querySelector("#sort-price").value;
+        if(selected==="Ascending"){
+            let Ascendent=productData.sort(function(a,b){
+                return Number(a.price)-Number(b.price);
+            });
+            displayTable(Ascendent);
+        }
+        if(selected==="Descending"){
+            let descendent=productData.sort(function(a,b){
+                return Number(b.price)-Number(a.price);
+            });
+            displayTable(descendent);
+        }    
+    };
+
     document.querySelector("#filter").addEventListener("change",handlefilterCategory);
     function handlefilterCategory(){
     let selected=document.querySelector("#filter").value;
@@ -39,9 +81,8 @@ let productData=[
     };
     
   }
-    displayTable(productData);
+    
 let cartLS=JSON.parse(localStorage.getItem("cart-page"))||[];
-
 function displayTable(productData){
     document.querySelector("#container").innerHTML=null;
     productData.map(function(ele,index){
@@ -65,6 +106,8 @@ function displayTable(productData){
         document.querySelector("#container").append(div);
     });
 }
+displayTable(productData); 
+
 function AddtoCart(ele,index){
     let flag=true;
     for(let i=0;i<cartLS.length;i++){
@@ -80,5 +123,29 @@ function AddtoCart(ele,index){
         localStorage.setItem("cart-page",JSON.stringify(cartLS));
     }       
 }
+
+
+
+let loginLS=JSON.parse(localStorage.getItem("login"));
+if(loginLS != null){
+    document.querySelector("#nav").innerHTML = null;
+    username=document.createElement("h1");
+    username.innerText=loginLS.Name;
+     let cartBtn=document.createElement("a");
+     cartBtn.setAttribute("href","cart.html");
+     cartBtn.innerText="CART";
+     document.querySelector("#nav").append(username,cartBtn);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 

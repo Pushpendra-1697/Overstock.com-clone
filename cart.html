@@ -5,21 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart Page</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <h1>Cart Page</h1>
+    <div id="nav">
+        <a href="signup.html">signup</a>
+        <a href="login.html">login</a>
+    </div>
+    <h2>Total Quantity <span id="total-quantity">0</span></h2>
     <h2> Total Cart Value:- <span id="total-price">0</span></h2>
     <div id="container"></div>
 </body>
 </html>
 <script>
-    displayTable(cartLS);
+    
+   
 let cartLS=JSON.parse(localStorage.getItem("cart-page"))||[];
-
 function displayTable(cartLS){
     document.querySelector("#container").innerHTML=null;
     let sum=0;
-    productData.map(function(ele,index){
+    let count=0;
+    cartLS.map(function(ele,index){
+        count++;
         sum+=Number(ele.price);
         let div=document.createElement("div");
         let image=document.createElement("img");
@@ -28,7 +40,7 @@ function displayTable(cartLS){
         price.innerText=ele.price;
         let catagory=document.createElement("h5");
         catagory.innerText=ele.catagory;
-        let para=document.createElement("p");
+        let para=document.createElement("p");  
         para.innerText=ele.para;
         let star=document.createElement("img");
         star.setAttribute("src",ele.star);
@@ -41,9 +53,22 @@ function displayTable(cartLS){
         document.querySelector("#container").append(div);
     });
      document.querySelector("#total-price").innerText=sum;
+     document.querySelector("#total-quantity").innerText=count;
 }
+displayTable(cartLS);
 
 function deletetoCart(ele,index){
+   cartLS.splice(ele,1);
+   localStorage.setItem("cart-page",JSON.stringify(cartLS));
+   displayTable(cartLS);
+}
 
+
+let loginLS=JSON.parse(localStorage.getItem("login"));
+if(loginLS != null){
+    document.querySelector("#nav").innerHTML = null;
+    username=document.createElement("h1");
+    username.innerText=loginLS.Name;
+     document.querySelector("#nav").append(username);
 }
 </script>
