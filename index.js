@@ -1,12 +1,28 @@
+
+// popup//
+let popup = document.querySelector('.pop-up')
+let closeBtn = document.querySelector('.close-btn') 
 document.querySelector(".first").addEventListener("click",PopupFunc);
     function PopupFunc(){
-        alert(window.location.href="Details.html");   
+      popup.style.display = "block"; 
     }
 
-    document.querySelector(".random").addEventListener("click",RandomFunc);
- function RandomFunc(){
-    alert(window.location.href="confidence.html");
- }
+    // closing of popup
+closeBtn.addEventListener('click',()=>{
+  popup.style.display = "none";
+});
+
+
+
+let popup1= document.querySelector('.pop-up1')
+let closeBtn1 = document.querySelector('.close-btn1')
+  document.querySelector(".random").addEventListener("click",RandomFunc);
+    function RandomFunc(){
+          popup1.style.display="block";
+   }
+   closeBtn1.addEventListener('click',()=>{
+    popup1.style.display = "none";
+  });
 
   document.querySelector(".image5").addEventListener("click",cartFunct);
   document.querySelector(".cart").addEventListener("click",cartFunct);

@@ -1,0 +1,56 @@
+.pop-up1 div {
+    padding: 10px;
+}
+.origin h2{
+    font-size: 30px;
+}
+.close-btn1{
+    margin-left: 400px;
+}
+.first1{
+    display: flex;
+    padding: 10px;
+    gap: 30px;
+}
+.second {
+    display: flex;
+    padding: 10px;
+    gap: 30px;
+}
+.third {
+    display: flex;
+    padding: 10px;
+    gap: 30px;
+}
+.origin {
+    background-color: aliceblue;
+}
+.first1 img,.second img,.third img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(222, 226, 229);
+}
+.first1 h1,.second h1,.third h1,.four h1{
+    font-size: 25px;
+}
+.third p {
+    width: 270px;
+    margin-top: 5px;
+   line-height: 20px;
+}
+.four {
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+}
+.four img {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(153, 95, 116);
+}
+.four ul li{
+    line-height: 10px;
+    margin-top: 10px;
+
+}
