@@ -5,39 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>produnct</title>
-    <style>
-        h1{
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="product.css">
 </head>
 <body>
-
-    <h1>Product page</h1>
-    <div id="nav">
-        <a href="signup.html">signup</a>
-        <a href="login.html">login</a>
+    <div id="sticky">
+        <h1>Product page</h1>
+        <div id="nav">
+            <a href="signup.html">signup</a>
+            <a href="login.html">login</a>
+        </div>
+    
+        <select id="sort-category">
+            <option>Short By Category</option>
+            <option value="Ascending">Ascending</option>
+            <option value="Descending">Descending</option>
+        </select>
+    
+        <select id="sort-price">
+            <option>Sort By price</option>
+            <option value="Ascending">Ascending</option>
+            <option value="Descending">Descending</option>
+        </select>
+    
+        <select id="filter">
+            <option value="">Select Catagory</option>
+            <option value="Twin XL">Twin XL</option>
+            <option value="Full">Full</option>
+            <option value="Queen">Queen</option>
+            <option value="King">King</option>
+        </select>
     </div>
 
-    <select id="sort-category">
-        <option>Short By Category</option>
-        <option value="Ascending">Ascending</option>
-        <option value="Descending">Descending</option>
-    </select>
-
-    <select id="sort-price">
-        <option>Sort By price</option>
-        <option value="Ascending">Ascending</option>
-        <option value="Descending">Descending</option>
-    </select>
-
-    <select id="filter">
-        <option value="">Select Catagory</option>
-        <option value="Twin XL">Twin XL</option>
-        <option value="Full">Full</option>
-        <option value="Queen">Queen</option>
-        <option value="King">King</option>
-    </select>
+    
     <div id="container"></div>
 </body>
 </html>

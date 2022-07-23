@@ -1,0 +1,68 @@
+h1{
+    text-align: center;
+    color: green;
+}
+#sticky{
+     position: sticky;
+     top: 0.1px;
+     padding: 5px 20px;
+     background-color: white;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#sticky h2{
+    color: goldenrod;
+}
+#sticky span{
+    color: green;
+    font-size: 30px;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 30px;
+    text-align: center;
+}
+#container > div{
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+#container h2{
+    padding: 10px;
+    font-size: 40px;
+    color: goldenrod;
+}
+#container h5{
+    padding: 10px;
+    font-size: 23px;
+    margin-top: -30px;
+}
+#container p{
+    padding: 10px;
+    color: rgb(203, 185, 221);
+    margin-top: -33px;
+}
+#container button{
+    padding: 10px;
+    color: white;
+    font-size: 23px;
+    background-color: rgba(247, 7, 7, 0.77);  
+    border-radius: 10px;
+    border: 0.5 px solid goldenrod;
+    margin: 0px 30px 30px 50px;
+}
+#container img:nth-child(1){
+    width: 100%;
+}
+
+@media all and (min-width:481px) and (max-width:768px){
+     #container{
+      grid-template-columns: repeat(2,1fr);
+     }
+}
+
+@media all and (min-width:320px) and (max-width:480px){
+  #container{
+      grid-template-columns: repeat(1,1fr);
+     }
+}
