@@ -1,0 +1,86 @@
+h1{
+  text-align: center;
+  color: green;
+}
+a{
+    text-decoration: none;
+    color: red;
+    font-size: 40px;
+    margin-left: 90%;
+}
+#sort-category,#sort-price,#filter{
+    padding: 13px;
+    font-size: large;
+    border-radius: 10px;
+    color: rgb(34, 171, 100);
+    margin-bottom: 30px;
+    margin-right: 10px;
+    border: 2px solid black;
+}
+#sticky{
+    position: sticky;
+    top: 0.1px;
+    padding: 5px 16px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:15px;
+    padding: 20px;
+    text-align: center;      
+}
+#container div{
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+#container h2{
+    padding: 10px;
+    font-size: 40px;
+    color: goldenrod;
+    
+}
+#container h5{
+    padding: 10px;
+    font-size: 25px;
+    margin-top: -20px;
+}
+#container p{
+    padding: 10px;
+    color: rgb(203, 185, 221);
+    margin-top: -20px;
+}
+#container button{
+    padding: 5px;
+    font-size: 20px;
+    color: blue;
+    border-radius: 10px;
+    border: 0.5px solid red;
+    margin-top: 6px;   
+}
+#container img:nth-child(1){
+    width: 100%;
+}
+#container img:nth-child(6){
+    padding-bottom: 15px;
+}
+
+@media all and (min-width:481px) and (max-width:768px){
+      a{
+           margin-left: 40%;
+       }
+       #container{
+        grid-template-columns: repeat(2,1fr);
+       }
+
+}
+
+@media all and (min-width:320px) and (max-width:480px){
+    a{
+        margin-left: 40%;
+    }
+    #container{
+        grid-template-columns: repeat(1,1fr);
+       }
+}

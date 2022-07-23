@@ -1,0 +1,157 @@
+ /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.container{
+    max-width: 1300px;
+    margin:0 auto;
+    padding: 0 32px;
+}
+
+/* ############ footer ############3 */
+
+footer{
+    background-color: rgb(71, 71, 78);
+    color: white;
+}
+
+footer section .father1{
+    display: flex;
+    justify-content: space-between;
+}
+footer .section1{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.205);
+    padding-bottom: 15px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+  padding: 3em 0;
+}
+footer .nav-item1{
+    flex: 0 1 50%;
+}
+footer .child4{
+   flex: 0 1 25%;
+}
+footer .child5{
+   flex: 0 1 25%;
+}
+
+
+.child2{
+    display: flex;
+}
+footer .nav-item1 a{
+    font-size: 30px;
+    color: white;
+    margin-right: 3.2em;
+}
+footer .child2 i{
+    font-size: 30px;
+    color: white;
+}
+footer .child3 .child1{
+    margin: 10px 0;
+}
+footer .child4 h2{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+footer .child5{
+    margin-top: 30px; 
+}
+footer .child6 h3{
+margin-bottom: 1.5em;
+font-size: 15px;
+font-weight: 700;
+}
+footer .child6 p{
+margin-bottom: 1.5em;
+font-size: 14px;
+font-weight: 700;
+}
+footer .child10 h4{
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 1.5em;
+}
+
+.child11{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+
+footer .child12{
+    flex: 0 1 50%;
+   
+}
+footer .child13{
+    flex: 0 1 25%;
+}
+footer .child14{
+    flex: 0 1 25%;
+}
+
+.child11 h3, h4{
+    margin-bottom: 1em;
+}
+footer .child15{
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5em 0;
+}
+footer .child17{
+    flex: 0 1 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.bg-color2{
+    background-color: rgb(24, 24, 34);
+}

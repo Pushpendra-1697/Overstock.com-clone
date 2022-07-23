@@ -1,0 +1,524 @@
+#father{
+    display: flex;
+    gap:20px;
+}      
+.first{
+    background-color: red;
+    text-align: center;
+    padding: 7px;
+    font-size: 25px;
+    color: white;
+}
+a{
+    color: white;
+}
+span{
+    text-decoration: underline;
+}
+.image{
+    width: 200px;
+    height: 100px;
+}
+.image1{
+    width: 120px;
+    height: 60%;
+    margin-top: 30px;
+}
+
+.image2,.image3,.image4,.image5{
+    width: 60px;
+    height: 50px;
+    margin-top: 30px;
+    margin-right: -14px;
+}
+#box2{
+    border:1px solid rgb(239, 229, 229);
+    display: flex;
+    gap: 60px;
+    padding: 10px;
+}
+.or{
+    font-size: 30px;
+}
+div:nth-child(13){
+    color: red;
+}
+#middle{
+    display: flex;
+    gap: 500px;
+    padding: 30px;
+    height: 30px;
+    background-color: rgb(231, 238, 244);
+}
+.background{
+    border-right: 1px solid black;
+    padding-right: 4rem;
+}
+#middle>div>p{
+    width: 450px;
+    font-size: 17px;
+    
+}
+#middle span{
+    text-decoration: underline;
+    font-size: 14px;  
+    
+}
+h1{
+    text-align: center;
+}
+#middle2{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(1,1fr);
+    padding: 20px;
+}
+#middle2>div>img{
+    height:200px;
+    width:200px;
+    background-color: rgb(236, 233, 230);
+}
+#grandfather{
+    position: sticky;
+    top: 0.1px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;   
+    background-color: white;
+    padding: 5px 16px;
+}
+#grandfather img{
+    width: 100%;
+}
+
+#container{
+    display: grid;
+    grid-template-columns:repeat(9,1fr);
+    gap: 10px;
+    padding: 30px;
+    width: 95vw;
+    position: relative; 
+}   
+#container img:nth-child(1){
+    height: 150px;
+    width: 100%;
+    border: 0.5px solid rgb(214, 178, 178);
+}
+#container span{
+    text-decoration: none;
+    color: red;
+}
+#container button{
+    position: absolute;
+    top: 30%;
+    background-color: white;
+    border: none;
+    font-size: 1.5rem;
+    color: black;
+    padding: 10px;
+    border-radius: 6px;
+}
+#container button:nth-child(1){
+   left: 30px;
+}
+#container button:nth-child(2){
+   right: 28px;
+}
+#display{
+    display: flex;
+    height: 20px;
+    margin-top:30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+#display input{
+    padding: 10px;
+    width: 750px;
+    border: none;
+    font-size: medium;
+}
+#navbar{
+    border: 0px solid red;
+    padding: 50px;
+    margin-bottom: 40px;
+}
+#navbar>img{
+    width: 100%;
+}
+#navbar1{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 10px;
+    padding: 60px;
+    margin-top: -40px;
+}
+#navbar1>div{
+    text-align: center;
+    padding: 10px;
+}
+#navbar1 img{
+    height: 200px;
+    width:100%;
+}
+#navbar2{
+    display: grid;
+    grid-template-columns:repeat(8,1fr);
+    gap: 10px;
+    padding: 30px;
+    position: relative;     
+}
+#navbar2 div{
+    background-color: rgb(210, 222, 232);
+}
+#navbar2 img{
+    height: 170px;
+    width: 100%;
+    border: 0.5px solid rgb(214, 178, 178);
+}
+#navbar2 p{
+    color:black;
+    padding: 10px;
+    line-height: 23px;
+}
+#navbar2 h3{
+    padding: 10px;
+    font-size: 23px;
+    color: black;
+}
+#navbar2 button{
+    position: absolute;
+    top: 35%;
+    background-color: rgb(100, 100, 100,0.4);
+    border: none;
+    font-size: 1.5rem;
+    color: black;
+    padding: 10px;
+    border-radius: 6px;
+}
+#navbar2 button:nth-child(1){
+   left: 30px;
+}
+#navbar2 button:nth-child(2){
+   right: 28px;
+}
+.heat{
+    padding: 50px;
+}
+.heat img{
+    width:100%;
+    height:500px;
+}
+#navbar3{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    padding: 30px;
+    text-align: center;
+}
+#navbar3>div{
+    background-color: rgb(236, 239, 241);
+   
+}
+#navbar3 p{
+    padding: 10px;
+    font-size: 20px;
+    width: 180px;
+    margin-left: 60px;
+}
+#navbar3 span{
+    width: 20px;
+    text-decoration: none;
+    font-size:30px ;
+}
+#navbar4{
+    display: flex;
+    padding: 50px;
+}
+#navbar4 .image{
+   width: 700px;
+   height: 353px;
+   background-color: rgb(218, 230, 240);
+}
+.randon{
+    background-color: aliceblue;
+    margin-bottom: 40px;
+}
+#navbar5{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    gap: 10px;
+    font-size: 20px;
+     padding: 30px;
+     margin-left: 40px;
+     margin-bottom: -20px;
+}
+#navbar6{
+    display: grid;
+    grid-template-columns:repeat(9,1fr);
+    gap: 10px;
+    padding: 30px;
+    width: 95vw;
+    position: relative; 
+}
+#navbar6 img:nth-child(1){
+    height: 150px;
+    width: 100%;
+    border: 0.5px solid rgb(214, 178, 178);
+}
+#navbar6 span{
+    text-decoration: none;
+    color: red;
+}
+#navbar6 button{
+    position: absolute;
+    top: 30%;
+    background-color: rgb(100, 100, 100,0.1);
+    border: none;
+    font-size: 1.5rem;
+    color: black;
+    padding: 10px;
+    border-radius: 6px;
+}
+#navbar6 button:nth-child(1){
+   left: 30px;
+}
+#navbar6 button:nth-child(2){
+   right: 28px;
+}
+.random{
+    margin-left: 50px;
+}
+#navbar7{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+    padding: 80px;
+    margin-top: -65px;
+}
+#navbar7 img{
+    height: 400px;
+    width:100%;
+}
+#navbar7>div{
+    background-color: aliceblue;
+}
+#navbar7 p{
+    font-size: 20px;
+    padding: 20px;
+}
+#navbar7 h2{
+    padding: 20px;
+    margin-bottom: -30px;
+}
+.BTN{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: -50px;
+}
+.BTN button{
+    background-color: rgb(35, 35, 45);
+    color:white;
+    padding: 12px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+}
+.random1{
+    padding: 50px;
+} 
+#navbar8{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 10px;
+    padding: 30px;
+    text-align: center;
+}
+#navbar8>div{
+    padding: 10px;
+    background-color: rgb(242, 246, 249);
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 30px;
+}
+#navbar9{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+#navbar9 img{
+    width: 100px;
+    height: 100px;
+}
+#navbar9 button{
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    border:1px solid rgb(85, 81, 75);
+}
+#navbar9 h3{
+    font-size: 20px;
+}
+#navbar9 p{
+    color: rgb(122, 122, 219);
+    margin-left: 40px;
+}
+#navbar10{
+    width:100vw;
+    position: relative;
+    margin: 20px auto;
+    width: 90%;
+}
+.crauser{
+    width: 100%;
+    height: 550px;
+}
+#navbar10 button{
+    position: absolute;
+    top:40%;
+    background-color: rgb(100, 100, 100,0.3);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
+    font-size: 1.5rem;
+    color: black;
+    padding: 20px;
+    border-radius: 50%;
+}
+#navbar10 button:nth-child(2){
+    left: 10px;
+}
+#navbar10 button:nth-child(3){
+    right: 10px;
+}
+@media all and (min-width:481px) and (max-width:768px){
+    #middle{
+        flex-direction: column;
+    }
+    #middle2{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    #navbar{
+        padding: 10px;
+    }
+    #navbar img{
+        height: 600px;    
+    }
+    #navbar1{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .heat{
+        padding: 20px;
+    }
+    #navbar3{
+        grid-template-columns: repeat(2,1fr);  
+    }
+    #navbar4{
+        flex-direction: column;
+    }
+    #navbar4 img{
+        width: 100%;
+    }
+    #navbar4 > div:nth-child(2)>img{
+        width:533px;
+    }
+    .randon{
+      width: 620px;
+    }
+    #navbar6{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .random img{
+        width:600px;
+    }
+    #navbar7{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .random1{
+        padding: 10px;
+    }
+    .random1 img{
+        width: 600px;   
+    }
+    #navbar8{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #navbar9{
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    #container{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #navbar2{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media all and (min-width:320px) and (max-width:480px){
+    #middle{
+        flex-direction: column;
+    }
+    #middle2{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    #navbar{
+        padding: 10px;
+    }
+    #navbar img{
+        height: 600px;    
+    }
+    #navbar1{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .heat{
+        padding: 20px;
+    }
+    #navbar3{
+        grid-template-columns: repeat(2,1fr);  
+    }
+    #navbar4{
+        flex-direction: column;
+    }
+    #navbar4 img{
+        width: 100%;
+    }
+    #navbar4 > div:nth-child(2)>img{
+        width:533px;
+    }
+    .randon{
+      width: 620px;
+    }
+    #navbar6{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .random img{
+        width:600px;
+    }
+    #navbar7{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .random1{
+        padding: 10px;
+    }
+    .random1 img{
+        width: 600px;   
+    }
+    #navbar8{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #navbar9{
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    #container{
+        grid-template-columns: repeat(3,1fr);
+    }
+    #navbar2{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
